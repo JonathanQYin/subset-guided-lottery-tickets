@@ -1,6 +1,6 @@
-# Which Images Should Guide Neural Network Pruning?
+# Can Data Selection Reveal Better Lottery Tickets?
 
-We use 20% or 25% of the CIFAR-10 training images to decide which network weights to keep, then train the resulting sparse network on the full training split. We test whether selecting images by difficulty, feature similarity, or gradient similarity yields higher validation accuracy than random sampling. We vary sparsity and training seed on ResNet-32 and use a matched VGG-19 experiment to see whether the selector rankings carry over to a larger network.
+We study whether the choice of training images used during pruning can help uncover a better *lottery ticket* on CIFAR-10. A ticket is a sparse subnetwork paired with the original initialization of its surviving weights. One hypothesis is that iterative magnitude pruning (IMP) finds better tickets from images with high forgetting scores than from a random subset of the same size. To judge which ticket is better, we fix the sparsity and dense initialization, train each masked network on the full training split under the same schedule, and compare validation accuracy.
 
 The four Python entry points train a dense baseline, select discovery images, find a weight mask, and train the fixed mask on the full training partition. The sweep runner connects them and produces paired comparisons for each seed.
 
