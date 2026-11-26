@@ -2,6 +2,14 @@
 
 The four Python entry points train a dense baseline, select discovery images, find a weight mask, and train the fixed mask on the full training partition. The sweep runner connects them and produces paired comparisons for each seed.
 
+## Numerical results
+
+[Download the experiment accuracies (JSON)](results/experiment_accuracies.json) for all 628 saved CIFAR-10 validation measurements. The file includes overall accuracy, correct and evaluated image counts, and accuracy for each of the ten classes. It can be used independently of the notebooks and checkpoints.
+
+- `sparse_runs` contains 616 research pruning results and three one-epoch smoke results. Filter by architecture, seed, subset fraction, sparsity, pruner, selector, and difficulty. Use `sweep_id` together with `run_id` to identify a measurement.
+- `dense_baselines` contains six 200-epoch research baselines, two 10-epoch timing benchmarks, and one smoke baseline.
+- `sweep_summaries` gives each pruner's mean subset accuracy and the available random, full-data, or data-free controls. Accuracy fields are percentages. Subset fraction and sparsity use the 0–1 scale.
+
 ## Results notebooks
 
 - [IMP comparison](imp_comparison.ipynb) compares eight iterative magnitude pruning sweeps across selectors, training seeds, sparsity, subset size, and architecture.
