@@ -18,11 +18,11 @@ For a fresh clone, [create the project environment](#recreate-the-environment) f
 
 ```powershell
 .\.venv\Scripts\python.exe run_experiments.py --dry-run
-.\.venv\Scripts\python.exe run_experiments.py --config smoke.json
+.\.venv\Scripts\python.exe run_experiments.py --config configs/smoke.json
 .\.venv\Scripts\python.exe -m unittest -v test_pipeline
 ```
 
-The smoke configuration uses one dense epoch, two discovery updates, and one final epoch on the regular 45,000/5,000 train/validation split. Its accuracy is for checking the pipeline. For a research sweep, edit `DEFAULTS` in `run_experiments.py` or pass JSON overrides with `--config`. The default uses ResNet-32, seeds 0/1/2, three subset rules, full-data controls, one-shot magnitude and eight-round IMP, 80% weight sparsity, and 200 final epochs. Run with `--dry-run` to see the counts. Add `vgg19` to the architectures list for the CIFAR VGG-19 variant with batch normalization and a ten-class linear head.
+The example sweep configurations are in [configs/](configs/). The smoke configuration uses one dense epoch, two discovery updates, and one final epoch on the regular 45,000/5,000 train/validation split. Its accuracy is for checking the pipeline. For a research sweep, edit `DEFAULTS` in `run_experiments.py` or pass JSON overrides with `--config`. The default uses ResNet-32, seeds 0/1/2, three subset rules, full-data controls, one-shot magnitude and eight-round IMP, 80% weight sparsity, and 200 final epochs. Run with `--dry-run` to see the counts. Add `vgg19` to the architectures list for the CIFAR VGG-19 variant with batch normalization and a ten-class linear head.
 
 ## Four independent commands
 
