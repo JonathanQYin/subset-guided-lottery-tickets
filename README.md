@@ -12,13 +12,6 @@ The four Python entry points train a dense baseline, select discovery images, fi
 - `dense_baselines` contains six 200-epoch research baselines, two 10-epoch timing benchmarks, and one smoke baseline.
 - `sweep_summaries` gives each pruner's mean subset accuracy and the available random, full-data, or data-free controls. Accuracy fields are percentages. Subset fraction and sparsity use the 0–1 scale.
 
-## Results notebooks
-
-- [IMP comparison](imp_comparison.ipynb) compares eight iterative magnitude pruning sweeps across selectors, training seeds, sparsity, subset size, and architecture.
-- [Full sweep comparison](sweep_comparison.ipynb) compares all five pruning methods and examines which examples the selectors chose.
-
-Both notebooks include saved figures and tables that you can view on GitHub. To recompute them, restore the corresponding experiment folders under `runs/` and open the notebook from the repository root. The full sweep notebook also uses CIFAR-10 for its image-level analyses. The datasets, model checkpoints, result archives, and Vast.ai upload bundles are stored separately from Git.
-
 ## Run the pipeline
 
 For a fresh clone, [create the project environment](#recreate-the-environment) first. Run the following commands in PowerShell from the repository root.

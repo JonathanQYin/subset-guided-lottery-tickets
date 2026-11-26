@@ -20,6 +20,9 @@ __pycache__/
 *.safetensors
 *.log
 
+# Personal code walkthroughs
+/*_walkthrough.html
+
 # Local settings and credentials
 .env
 .env.*
