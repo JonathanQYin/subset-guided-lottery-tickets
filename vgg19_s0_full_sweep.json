@@ -1,0 +1,22 @@
+{
+  "architectures": ["vgg19"],
+  "seeds": [0],
+  "split_seed": 260,
+  "batch_size": 128,
+  "baseline_epochs": 200,
+  "final_epochs": 200,
+  "reference_epochs": [10],
+  "selectors": ["random", "feature_cluster", "gradient_cluster", "loss", "average_margin", "el2n", "gradient_norm", "forgetting"],
+  "difficulties": ["easy", "hard", "mixed"],
+  "fractions": [0.25],
+  "cluster_iterations": 15,
+  "pruners": ["magnitude", "imp", "snip", "grasp", "synflow"],
+  "sparsities": [0.9],
+  "rounds": 8,
+  "discovery_updates": 14080,
+  "full_discovery_updates": 70400,
+  "score_examples": 256,
+  "synflow_iterations": 100,
+  "include_full": true,
+  "coverage": false
+}

@@ -1,0 +1,15 @@
+{
+  "seeds": [0],
+  "baseline_epochs": 1,
+  "final_epochs": 1,
+  "reference_epochs": [1],
+  "selectors": ["random", "feature_cluster"],
+  "fractions": [0.2],
+  "cluster_iterations": 2,
+  "pruners": ["magnitude"],
+  "discovery_updates": 2,
+  "full_discovery_updates": 2,
+  "include_full": true,
+  "coverage": true,
+  "coverage_epoch": 1
+}

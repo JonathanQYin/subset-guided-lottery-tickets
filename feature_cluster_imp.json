@@ -1,0 +1,17 @@
+{
+  "architectures": ["resnet32"],
+  "seeds": [0],
+  "split_seed": 260,
+  "batch_size": 128,
+  "baseline_epochs": 200,
+  "reference_epochs": [10],
+  "selectors": ["feature_cluster"],
+  "fractions": [0.25],
+  "cluster_iterations": 15,
+  "pruners": ["imp"],
+  "sparsities": [0.9],
+  "rounds": 8,
+  "discovery_updates": 14080,
+  "final_epochs": 200,
+  "include_full": false
+}
